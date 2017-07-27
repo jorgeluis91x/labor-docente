@@ -1,0 +1,23 @@
+{
+  "name": "Labor Docente",
+  "description": "Aplicacion de labor docente",
+  "main": "app.js",
+  "keywords": [
+    "udenar",
+    "ejemplo"
+  ],
+  "authors": [
+    "Jorge Luis Viveros",
+    "Juan Carlos Pantoja"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "bootstrap": "^3.3.6",
+    "angular-sweetalert": "latest",
+    "angular-translate": "^2.11.1",
+    "font-awesome": "fontawesome#^4.6.3"
+  }
+}

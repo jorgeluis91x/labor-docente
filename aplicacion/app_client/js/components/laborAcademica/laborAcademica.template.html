@@ -1,0 +1,145 @@
+<navigation></navigation>
+
+<div class="content-wrapper">
+    <div container>
+
+        <section class="content-header">
+            <h1>
+                {{titulo.titulo}}
+                <small>{{ titulo.subtitulo }}</small>
+            </h1>
+            <br>
+        </section>
+
+        <section class="content">
+
+            <div ng-cloak>
+            	<md-content style="background:white">
+            		<md-tabs md-dynamic-height md-border-bottom>
+            			<md-tab ng-repeat="tab in tabs" label="{{tab.title}}">
+            				<md-content class="md-padding" style="background:white">
+            					
+            					<h1 ng-show="tab.showTitle" class="md-display-1">{{tab.title}}</h1>
+            					<ng-include src="tab.view"></ng-include>
+            					<!--<ng-include src="tab.view"></ng-include>-->
+            				</md-content>
+            			</md-tab>
+
+            		</md-tabs>
+            	</md-content>
+            </div>
+
+           <!-- <div class="nav-tabs-custom" >
+                <div class="tab-content">
+
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-info pull-right">Guardar</button>
+                    </div>
+
+                </div>
+            </div>-->
+
+        </section>
+
+    </div>
+</div>
+
+<!-- Modals -->
+<div class="modal fade" id="addAsignaturaModal">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">Agregar Asignatura</h4>
+			</div>
+			<div class="modal-body">
+                <ng-include src="'/js/components/laborAcademica/AgregarAsignatura.template.html'"></ng-include>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancelar</button>
+				<button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="guardarInvestigacion()" >Guardar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="addInvestigacionModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Agregar Actividades de Investigación </h4>
+            </div>
+            <div class="modal-body">
+                <ng-include src="'/js/components/laborAcademica/AgregarInvestigacion.template.html'"></ng-include>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" ng-click="guardarInvestigacion()" data-dismiss="modal" >Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="addInteraccionSocialModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Agregar Interacción Social</h4>
+            </div>
+            <div class="modal-body">
+                <ng-include src="'/js/components/laborAcademica/AgregarInteraccionSocial.template.html'"></ng-include>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal"  ng-click="guardarInteraccionSocial()" >Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="addActividadesAdministracionModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Agregar Administración y Gestión </h4>
+            </div>
+            <div class="modal-body">
+                <ng-include src="'/js/components/laborAcademica/AgregarActividadesAdministracion.template.html'"></ng-include>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="guardarAdministracion()">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="addMejoramientoAcademicoModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Agregar Mejoramiento Académico</h4>
+            </div>
+            <div class="modal-body">
+                <ng-include src="'/js/components/laborAcademica/AgregarMejoramientoAcademico.template.html'"></ng-include>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="guardarMejoramientoAcademico()" >Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Modals -->
+
+<footer-generic>
+</footer-generic>

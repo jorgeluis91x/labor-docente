@@ -1,0 +1,76 @@
+<div class="col-md-12">
+	<div class="box">
+
+		<div class="box-header with-border">
+			<h3 class="box-title"> {{"ADMINISTRACIÓON Y GESTIÓN " | uppercase}}</h3>
+		</div>
+		<div class="box-body">
+			<table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+
+				<thead>
+					<tr role="row">
+
+						<th class="col-sm-5">Cargo</th>
+						<th class="col-sm-5">Tipo Cargo</th>
+						<th class="col-sm-1">I.H.S</th>
+						<th class="col-sm-1">I.H.SM</th>
+						<th class="col-sm-1"></th>
+
+						
+						
+					</tr>
+				</thead>
+				<tbody>
+
+					<tr role="row" class="odd" ng-repeat=" actividadAdministracion in actividadesAdministracion">
+						<td>{{actividadAdministracion.cargo}}</td>
+						<td>{{actividadAdministracion.tipo_cargo}}</td>
+						<td>{{actividadAdministracion.H_S}}</td>
+						<td>{{actividadAdministracion.H_SM}}</td>
+						<td > 
+								<button type="submit" class="btn btn-error"  data-toggle="modal" data-target="#addActividadesAdministracionModal" ng-click="editarAdministracion(actividadAdministracion)" ><i class="fa  fa-pencil"></i></button> 	
+								<button type="submit" class="btn btn-danger" ng-click="eliminarInvestigacion(actividadesAdministracion,actividadAdministracion)"><i class="fa  fa-minus"  ></i></button>
+						</td>
+						
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="box-footer clearfix">
+			<button type="submit" data-toggle="modal" data-target="#addActividadesAdministracionModal" class="btn btn-success pull-right"  ng-click="agregarAdministracion()">Agregar</button>
+		</div>
+		
+	</div>
+	
+</div>
+
+
+
+<!--
+<form class="form-horizontal">
+	<div class="box-body">
+		<div class="form-group">
+		<div class="col-md-12" >
+			<label  class="col-sm-1 col-md-2 control-label">  </label>
+
+				<button type="submit" ng-click="agregarIntensidadHoraria(periodoIndex)" class="btn btn-info"><i class="fa fa-plus"></i></button>
+		
+			</div>
+		</div>
+		<div class="form-group">
+			<label  class="col-sm-2 control-label">Cargo</label>
+				<div class="col-sm-3">
+					<input type="text"  class="form-control"  placeholder="Cargo administrativo">						
+				</div>
+			<label class="col-sm-2 control-label">Intensidad Horaria</label>
+				<div class="col-sm-3" >					
+					<input type="text"  class="form-control"  placeholder="0">					
+				</div>	
+		</div>
+	</div>
+
+	<div class="box-footer">
+		<button type="submit" class="btn btn-primary pull-right">Guardar</button>		
+	</div>
+</form>
+-->

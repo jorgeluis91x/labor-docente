@@ -1,0 +1,47 @@
+<div class="col-md-12">
+	<div class="box">
+
+		<div class="box-header with-border">
+			<h3 class="box-title"> {{"INTERACCIÓN SOCIAL" | uppercase}}</h3>
+		</div>
+		<div class="box-body">
+			<table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+
+				<thead>
+					<tr role="row">
+
+						<th class="col-sm-4">Cargo o representación</th>
+						<th class="col-sm-4">Nombre del proyecto</th>
+						<th class="col-sm-2">Acuerdo de aprobación</th>
+						<th class="col-sm-1">I.H.S</th>
+						<th class="col-sm-1">I.H.SM</th>
+						<th class="col-sm-1"></th>
+
+						
+						
+					</tr>
+				</thead>
+				<tbody>
+					<tr role="row" class="odd" ng-repeat=" actividadProyeccionSocial in actividadesProyeccionSocial">
+						<td>{{actividadProyeccionSocial.cargo_representacion}}</td>
+						<td>{{actividadProyeccionSocial.nombre_proyecto}}</td>
+						<td>{{actividadProyeccionSocial.acuerdo_aprobacion}}</td>
+						<td>{{actividadProyeccionSocial.H_S}}</td>
+						<td>{{actividadProyeccionSocial.H_SM}}</td>
+						<td > 
+								<button type="submit" class="btn btn-error" data-toggle="modal" data-target="#addInteraccionSocialModal"   ng-click="editarProyeccionSocial(actividadProyeccionSocial)" ><i class="fa  fa-pencil"></i></button> 	
+								<button type="submit" class="btn btn-danger"  ng-click="eliminarInvestigacion(actividadesProyeccionSocial,actividadProyeccionSocial)"><i class="fa  fa-minus"></i></button>
+						</td>
+						
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="box-footer clearfix">
+			<button type="submit" data-toggle="modal" data-target="#addInteraccionSocialModal" class="btn btn-success pull-right" ng-click="agregarInteraccionSocial()">Agregar</button>
+		</div>
+		
+	</div>
+	
+</div>
+
